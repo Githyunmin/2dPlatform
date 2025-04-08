@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator pAni;
     private bool isGrounded;
+    
+    private bool isGiant = false;
 
     private void Awake()
     {
@@ -63,10 +65,30 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (isGiant)
+               Destroy(collision.gameObject);
+            else
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        if (collision.CompareTag("Item"))
+        {
+            isGiant = true;
+            Destroy(collision.gameObject);
+        }
+
+
+
+
+
+
+
+
+
+
     }
+
+
 
     
 }
