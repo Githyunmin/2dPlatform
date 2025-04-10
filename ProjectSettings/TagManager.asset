@@ -3,16 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Boundary
-  - Enemy
-  - Opstacle
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Player
   - Water
   - UI
   - 
@@ -43,7 +39,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: BackGround
-    uniqueID: 2595817037
+    uniqueID: 391140747
     locked: 0
   - name: Default
     uniqueID: 0
