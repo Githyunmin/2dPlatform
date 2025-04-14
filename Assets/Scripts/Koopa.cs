@@ -78,4 +78,12 @@
         Destroy(gameObject, 3f);
     }
 
+    private void OnBecameInvisible()
+    {
+        if (pushed) 
+        {
+            Destroy(gameObject);
+        }
+    }
+
     }
