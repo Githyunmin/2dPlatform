@@ -30,6 +30,8 @@ public class PowerUp : MonoBehaviour
 
             case Type.ExtraLife:
             GameManager.Instance.AddLife();
+            player.GetComponent<PlayerMovement>().SpeedUp();
+
             break;
 
             case Type.MagicMushroom:
